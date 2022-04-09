@@ -12,9 +12,9 @@
 
    图像用二维矩阵$M$表示，$M_{ij}$表示图像`M`的第`(i,j)`像素的值，像素值用红，绿，蓝表示。
 
-![image-20220126172300771](E:\ustc\CSAPP\labs\lab4\lab4.assets\image-20220126172300771.png)
+![image-20220126172300771](.\lab4.assets\image-20220126172300771.png)
 
-![image-20220126172314635](E:\ustc\CSAPP\labs\lab4\lab4.assets\image-20220126172314635.png)
+![image-20220126172314635](.\lab4.assets\image-20220126172314635.png)
 
 ```c
 #define RIDX(i,j,n) ((i)*(n)+(j))
@@ -77,7 +77,7 @@ make driver
 ./driver
 ```
 
-![image-20220126172952294](E:\ustc\CSAPP\labs\lab4\lab4.assets\image-20220126172952294.png)
+![image-20220126172952294](.\lab4.assets\image-20220126172952294.png)
 
 ​		可以看到`CPE`提升了一点，但是很有限。
 
@@ -108,7 +108,7 @@ void rotate(int dim, pixel *src, pixel *dst)
 
 果然`CPE`有了显著提示，结果：
 
-![image-20220126173553241](E:\ustc\CSAPP\labs\lab4\lab4.assets\image-20220126173553241.png)
+![image-20220126173553241](.\lab4.assets\image-20220126173553241.png)
 
 **3、循环展开**
 
@@ -142,7 +142,7 @@ int i,j,ki,kj;
 
 ​		程序运行结果如下，`CPE`还是提升的较明显，但和分块好像差不多。
 
-![image-20220126174229841](E:\ustc\CSAPP\labs\lab4\lab4.assets\image-20220126174229841.png)
+![image-20220126174229841](.\lab4.assets\image-20220126174229841.png)
 
 
 
@@ -192,7 +192,7 @@ void smooth(int dim, pixel *src, pixel *dst)
 
 ​		运行结果如下：`CPE`提升不是很多。
 
-![image-20220126174542925](E:\ustc\CSAPP\labs\lab4\lab4.assets\image-20220126174542925.png)
+![image-20220126174542925](.\lab4.assets\image-20220126174542925.png)
 
 2、先将边界条件计算完，按先计算四个角的值，再计算四条边的值，再计算非边界的点的值的顺序，这样可以避免大量的分支预测，还可以有良好的局部性。还有些细节，将判断第一行的循环移到判断非边界点的循环之前，可以改善一点缓存不命中的情况，代码如下：
 
@@ -386,7 +386,7 @@ void smooth(int dim, pixel *src, pixel *dst)
 
 ​		程序运行结果，`CPE`提升效果显著：
 
-![image-20220126175656052](E:\ustc\CSAPP\labs\lab4\lab4.assets\image-20220126175656052.png)
+![image-20220126175656052](.\lab4.assets\image-20220126175656052.png)
 
 
 

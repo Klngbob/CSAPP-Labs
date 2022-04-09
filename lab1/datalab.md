@@ -32,7 +32,7 @@
 5. 不能使用任何形式的类型转换
 6. 不能使用除`int`类型外的其他数据类型
 
-![image-20220115185744517](E:\ustc\CSAPP\labs\lab1\datalab.assets\image-20220115185744517.png)
+![image-20220115185744517](.\datalab.assets\image-20220115185744517.png)
 
 
 
@@ -456,11 +456,11 @@ unsigned floatPower2(int x) {
 
 ​	最后实验结果：通过所有测试
 
-![image-20220125145718045](E:\ustc\CSAPP\labs\lab1\datalab.assets\image-20220125145718045.png)
+![image-20220125145718045](.\datalab.assets\image-20220125145718045.png)
 
 运行` ./driver.pl`评估代码是否遵循`write-up`中的规则：全部通过，且$Perf$分数都得到了:grin:!
 
-![image-20220125150050609](E:\ustc\CSAPP\labs\lab1\datalab.assets\image-20220125150050609.png)
+![image-20220125150050609](.\datalab.assets\image-20220125150050609.png)
 
 ​	`data-lab`过程属实有点坎坷，做了好久才做完:sob:，不过也让我深入理解了数据的机器级表示，对位运算有了更加深入的了解，总体来说，`lab1`让我收获颇丰。
 
