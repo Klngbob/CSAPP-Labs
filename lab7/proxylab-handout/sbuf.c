@@ -1,7 +1,8 @@
 #include "csapp.h"
 #include "sbuf.h"
 
-void sbuf_init(sbuf_t* sp, int n) {
+void sbuf_init(sbuf_t *sp, int n)
+{
     sp->buf = Calloc(n, sizeof(int));
     sp->n = n;
     sp->front = sp->rear = 0;
@@ -10,11 +11,13 @@ void sbuf_init(sbuf_t* sp, int n) {
     Sem_init(&sp->items, 0, 0); /* 缓冲区已占有量的信号量 */
 }
 
-void sbuf_deinit(sbuf_t* sp) {
+void sbuf_deinit(sbuf_t *sp)
+{
     Free(sp->buf);
 }
 
-void sbuf_insert(sbuf_t* sp, int item) {
+void sbuf_insert(sbuf_t *sp, int item)
+{
     P(&sp->slots);
     P(&sp->mutex);
     sp->buf[(++sp->rear) % (sp->n)] = item;
@@ -22,7 +25,8 @@ void sbuf_insert(sbuf_t* sp, int item) {
     V(&sp->items);
 }
 
-int sbuf_remove(sbuf_t* sp) {
+int sbuf_remove(sbuf_t *sp)
+{
     int item;
     P(&sp->items);
     P(&sp->mutex);
