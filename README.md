@@ -8,6 +8,6 @@
 - [x] [Bomb Lab](./lab2/boomlab.md)：已完善实验笔记
 - [x] [Attack Lab](./lab3/attacklab.md)：已完善实验笔记
 - [x] [Cache Lab](./lab4/perflab.md)：已完善实验笔记
-- [x] [Shell Lab](./lab5/shlab-handout/)
-- [ ] [Malloc Lab](./lab6/malloclab-handout/)
-- [x] [Proxy Lab](./lab7/proxylab-handout/)
+- [x] [Shell Lab](./lab5/shlab-handout/): 实验笔记待补充...
+- [ ] [Malloc Lab](./lab6/malloclab-handout/)：待补充
+- [x] [Proxy Lab](./lab7/proxylab-handout/)：实验笔记待补充...
